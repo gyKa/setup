@@ -4,7 +4,7 @@
 sudo apt-get update
 
 # Remove useless files.
-sudo rm -rf ~/python_games/ ~/ocr_pi.png ~/Desktop/ 
+sudo rm -rf ~/python_games/ ~/ocr_pi.png ~/Desktop/
 
 # Remove useless packages.
 sudo apt-get remove --purge -y wolfram-engine python-picamera python3-picamera \

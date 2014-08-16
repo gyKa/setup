@@ -43,6 +43,11 @@ sudo mv transi_site /etc/nginx/sites-available/
 sudo ln -s /etc/nginx/sites-available/transi_site /etc/nginx/sites-enabled/transi_site
 make install -C transi/
 
+# Prepare pi site.
+wget https://raw.githubusercontent.com/gyKa/setup/master/raspberrypi/etc/nginx/sites-available/pi_site
+sudo mv pi_site /etc/nginx/sites-available/
+sudo ln -s /etc/nginx/sites-available/pi_site /etc/nginx/sites-enabled/pi_site
+
 # Restart PHP5 FastCGI process manager and nginx.
 sudo service php5-fpm restart
 sudo service nginx restart

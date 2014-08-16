@@ -23,6 +23,9 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get install -q -y mysql-server
 # Install PHP bridges between nginx and MySQL.
 sudo apt-get install -y php5-fpm php5-mysql
 
+# Install PHP command line interface.
+sudo apt-get install -y php5-cli
+
 # Install phpMyAdmin.
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -y phpmyadmin
 
@@ -32,5 +35,14 @@ sudo ln -s /usr/share/phpmyadmin/ /usr/share/nginx/www
 # Change default site configuration.
 wget https://raw.githubusercontent.com/gyKa/setup/master/raspberrypi/etc/nginx/sites-available/default
 sudo mv default /etc/nginx/sites-available/
+
+# Prepare transi site.
+git clone https://github.com/gyKa/transi.git
+wget https://raw.githubusercontent.com/gyKa/setup/master/raspberrypi/etc/nginx/sites-available/transi_site
+sudo mv transi_site /etc/nginx/sites-available/
+sudo ln -s /etc/nginx/sites-available/transi_site /etc/nginx/sites-enabled/transi_site
+make install -C transi/
+
+# Restart PHP5 FastCGI process manager and nginx.
 sudo service php5-fpm restart
 sudo service nginx restart

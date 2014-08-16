@@ -1,0 +1,18 @@
+server {
+	listen   80;
+
+	root /home/pi/transi/public;
+	index index.php;
+
+	server_name transi.karciauskas.lt;
+
+	# pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
+	location ~ \.php$ {
+		fastcgi_split_path_info ^(.+\.php)(/.+)$;
+
+		# With php5-fpm:
+		fastcgi_pass unix:/var/run/php5-fpm.sock;
+		fastcgi_index index.php;
+		include fastcgi_params;
+	}
+}

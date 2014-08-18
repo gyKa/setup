@@ -1,9 +1,7 @@
 server {
-	listen   80;
-
+	listen 80;
 	root /home/pi/transi/public;
 	index index.php;
-
 	server_name transi.karciauskas.lt;
 
 	# pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
@@ -14,5 +12,12 @@ server {
 		fastcgi_pass unix:/var/run/php5-fpm.sock;
 		fastcgi_index index.php;
 		include fastcgi_params;
+	}
+
+	# avoid the redirect for certain requests
+	location ~ \.css$ {}
+
+	location / {
+		rewrite ^(.*) /index.php last;
 	}
 }

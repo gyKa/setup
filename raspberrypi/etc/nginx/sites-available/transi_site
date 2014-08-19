@@ -16,6 +16,7 @@ server {
 
 	# avoid the redirect for certain requests
 	location ~ \.css$ {}
+	location ~ \.js$ {}
 
 	location / {
 		rewrite ^(.*) /index.php last;

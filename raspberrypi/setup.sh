@@ -51,3 +51,9 @@ sudo ln -s /etc/nginx/sites-available/pi_site /etc/nginx/sites-enabled/pi_site
 # Restart PHP5 FastCGI process manager and nginx.
 sudo service php5-fpm restart
 sudo service nginx restart
+
+# Prepare SSH for deployment.
+mkdir .ssh
+echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQClUVpqPk+DRJxbw18T1Xo7HQUOyYP+s4uahOEuZ8eMb9A540IQaZQcwH0UzICrvOl8gxTDabvOacY8VkLanX1lmkJWYg3B4jbpIY6wBx0H6l8WzHXXpR7GNQpNW7mmOYFB1xztKUIcTURXNozxi/Oeq/5MJJ4rSJOAleOX3MrzaapTkpEas8+Qv/kIJFTNx1yg+gWATG0DQREnekTm45U/2fSCsidt0pRWutyhnxRqpTw7IO1UsuzhFxPWZOxa/tP5DtfqqF2nQUV5zCZKv4T6ng8th1tq9dnmbql1KPmB4YMFrmHMH5CzU4WkvA3u8V76Xsm0bHV6ETt+9HZRIwGr Codeship/gyKa/transi" >> .ssh/authorized_keys
+chmod 700 .ssh
+chmod 600 .ssh/authorized_keys

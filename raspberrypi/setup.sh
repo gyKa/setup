@@ -11,6 +11,8 @@ sudo apt-get remove --purge -y wolfram-engine python-picamera python3-picamera \
     python-rpi.gpio python3-rpi.gpio gnome-themes-standard-data \ 
     gnome-icon-theme zenity zenity-common
 
+sudo apt-get autoremove --purge -y
+
 # Upgrade software packages.
 sudo apt-get upgrade -y
 
@@ -48,6 +50,10 @@ make install -C transi/
 wget https://raw.githubusercontent.com/gyKa/setup/master/raspberrypi/etc/nginx/sites-available/pi_site
 sudo mv pi_site /etc/nginx/sites-available/
 sudo ln -s /etc/nginx/sites-available/pi_site /etc/nginx/sites-enabled/pi_site
+
+# Prepare homino project.
+git clone https://github.com/gyKa/homino.git
+make install -C homino/
 
 # Restart PHP5 FastCGI process manager and nginx.
 sudo service php5-fpm restart

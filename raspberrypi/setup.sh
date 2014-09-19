@@ -16,6 +16,9 @@ sudo apt-get autoremove --purge -y
 # Upgrade software packages.
 sudo apt-get upgrade -y
 
+# Install IRC client and screen.
+sudo apt-get install -y weechat screen
+
 # Install WEB server.
 sudo apt-get install -y nginx
 sudo service nginx start

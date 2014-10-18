@@ -33,5 +33,11 @@ echo "==> Installing Composer globally..."
 curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
 
+echo "==> Installing MySQL server..."
+sudo apt-get install mysql-server
+
+echo "==> Installing phpMyAdmin..."
+sudo apt-get install phpmyadmin
+
 echo "==> Generating SSH key for this computer..."
 ssh-keygen -t rsa -C "eeePC"

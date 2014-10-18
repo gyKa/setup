@@ -29,5 +29,9 @@ sudo apt-get install curl
 echo "==> Installing PHP5..."
 sudo apt-get install php5
 
+echo "==> Installing Composer globally..."
+curl -sS https://getcomposer.org/installer | php
+sudo mv composer.phar /usr/local/bin/composer
+
 echo "==> Generating SSH key for this computer..."
 ssh-keygen -t rsa -C "eeePC"

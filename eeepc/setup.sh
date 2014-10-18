@@ -23,5 +23,11 @@ sudo apt-get install git
 git config --global user.name "Gytis Karčiauskas"
 git config --global user.email gytis@karciauskas.lt
 
+echo "==> Installing cURL..."
+sudo apt-get install curl
+
+echo "==> Installing PHP5..."
+sudo apt-get install php5
+
 echo "==> Generating SSH key for this computer..."
 ssh-keygen -t rsa -C "eeePC"

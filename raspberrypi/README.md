@@ -20,8 +20,3 @@ Then select "Finish" and "Yes".
 
 After reboot, change default account password, download `setup.sh` from this
 directory and run `bash setup.sh`.
-
-After setup, set MySQL root password: `mysqladmin -u root password NEWPASSWORD`.
-
-Clean bash history: `history -c && history -w`. First command clears the history,
-and the second writes the now (empty) history file.

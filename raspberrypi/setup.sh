@@ -17,4 +17,7 @@ sudo apt-get autoremove --purge -y
 sudo apt-get upgrade -y
 
 # Install IRC client and screen.
-sudo apt-get install -y weechat screen
+sudo apt-get install -y weechat weechat-scripts screen
+
+# Autoload Weechat scripts.
+ln -s /usr/share/weechat/perl/buffers.pl ~/.weechat/perl/autoload/buffers.pl

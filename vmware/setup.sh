@@ -58,3 +58,23 @@ sudo apt-get install -y python-pip
 
 echo "===> Installing Bottle framework..."
 sudo pip install bottle
+
+echo "===> Installing the stable release version of RVM..."
+gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
+\curl -sSL https://get.rvm.io | bash -s stable
+source ~/.rvm/scripts/rvm
+
+echo "===> Installing Ruby..."
+rvm install 2.1.4
+
+echo "===> Installing IRB..."
+sudo apt-get install -y irb
+
+echo "===> Installing NodeJS..."
+sudo apt-get install -y nodejs
+
+echo "===> Installing Rails..."
+gem install rails
+
+echo "===> Install Heroku Toolbelt"
+wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh

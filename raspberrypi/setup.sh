@@ -21,3 +21,6 @@ sudo apt-get install -y weechat weechat-scripts screen
 
 # Autoload Weechat scripts.
 ln -s /usr/share/weechat/perl/buffers.pl ~/.weechat/perl/autoload/buffers.pl
+
+# Install NPM.
+sudo apt-get install nodejs npm -y

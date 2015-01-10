@@ -9,7 +9,7 @@ sudo rm -rf ~/python_games/ ~/ocr_pi.png ~/Desktop/
 # Remove useless packages.
 sudo apt-get remove --purge -y wolfram-engine python-picamera python3-picamera \
     python-rpi.gpio python3-rpi.gpio gnome-themes-standard-data \ 
-    gnome-icon-theme zenity zenity-common
+    gnome-icon-theme zenity zenity-common xserver-xorg-core xserver-common
 
 sudo apt-get autoremove --purge -y
 

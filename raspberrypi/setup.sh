@@ -48,6 +48,25 @@ sudo ./install_server.sh
 cd ../..
 rm redis-2.8.17.tar.gz
 
+# Install Nginx.
+sudo apt-get install -y nginx
+sudo service nginx start
+
+# Install PHP.
+sudo apt-get install -y php5-fpm
+
+# Setup Nginx and PHP.
+sudo mkdir -p /var/www
+sudo chown -R $USER:$USER /var/www
+sudo chmod -R 755 /var/www
+wget https://raw.githubusercontent.com/gyKa/setup/master/raspberrypi/etc/nginx/sites-available/default > /dev/null 2>&1
+sudo mv default /etc/nginx/sites-available/
+sudo service php5-fpm restart
+sudo service nginx restart
+
+# Setup sites.
+git clone https://github.com/gyKa/evenite.git /var/www/evenite
+
 # Setup GIT.
 git config --global user.email "gytis@karciauskas.lt"
 git config --global user.name "Gytis Karčiauskas"

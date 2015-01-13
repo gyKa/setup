@@ -1,0 +1,34 @@
+# AITVARAS
+
+# Create an IRC server.
+/server add aitvaras irc.ktu.lt/6668
+
+# Connect with SSL.
+/set irc.server.aitvaras.ssl on
+
+# Auto-join some channels when connecting to server.
+/set irc.server.aitvaras.autojoin "#linux"
+
+# Set username and realname.
+/set irc.server.aitvaras.username "gyKa"
+/set irc.server.aitvaras.realname "Gytis"
+
+# Set nicknames.
+/set irc.server.aitvaras.nicks "gyKa,_gyKa_,-gyKa-,`gyKa`,^gyKa^"
+
+# FREENODE
+
+# Connect with SSL.
+/set irc.server.freenode.addresses "chat.freenode.net/7000"
+/set irc.server.freenode.ssl on
+/set irc.server.freenode.ssl_dhkey_size 1024
+
+# Auto-join some channels when connecting to server.
+/set irc.server.freenode.autojoin "#python-lt"
+
+# Set username and realname.
+/set irc.server.freenode.username "gyKa"
+/set irc.server.freenode.realname "Gytis"
+
+# Set nicknames.
+/set irc.server.freenode.nicks "gyKa,_gyKa_,-gyKa-,`gyKa`,^gyKa^"

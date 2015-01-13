@@ -56,9 +56,6 @@ sudo apt-get install -y mongodb-org
 echo "===> Installing PyPI..."
 sudo apt-get install -y python-pip
 
-echo "===> Installing Bottle framework..."
-sudo pip install bottle
-
 echo "===> Installing VirtualEnv..."
 sudo pip install virtualenv
 

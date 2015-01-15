@@ -55,6 +55,9 @@ sudo service nginx start
 # Install PHP.
 sudo apt-get install -y php5-fpm
 
+# Install Heroku Toolbelt
+wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+
 # Setup Nginx and PHP.
 sudo mkdir -p /var/www
 sudo chown -R $USER:$USER /var/www

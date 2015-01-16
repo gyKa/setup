@@ -1,5 +1,9 @@
 #!/bin/sh
 
+echo "==> Removing useless stuff..."
+rm ~/examples.desktop
+sudo rm -rf /usr/share/example-content/
+
 echo "==> Downloading the package lists from the repositories and updating them to get information on the newest versions of packages and their dependencies..."
 sudo apt-get update > /dev/null
 

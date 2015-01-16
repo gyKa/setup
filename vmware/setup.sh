@@ -74,11 +74,12 @@ rvm install 2.1.4
 echo "===> Installing IRB..."
 sudo apt-get install -y irb
 
-echo "===> Installing NodeJS..."
-sudo apt-get install -y nodejs
-
 echo "===> Installing Rails..."
 gem install rails
 
 echo "===> Install Heroku Toolbelt"
 wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+
+echo "===> Install NodeJS and NPM..."
+curl -sL https://deb.nodesource.com/setup | sudo bash -
+sudo apt-get install -y nodejs

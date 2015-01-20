@@ -19,11 +19,8 @@ sudo apt-get upgrade -y
 # Install system utils.
 sudo apt-get install -y htop vim
 
-# Install IRC client and screen.
-sudo apt-get install -y weechat weechat-scripts screen
-
-# Autoload Weechat scripts.
-ln -s /usr/share/weechat/perl/buffers.pl ~/.weechat/perl/autoload/buffers.pl
+# Install screen.
+sudo apt-get install -y screen
 
 # Install NodeJS and NPM.
 wget http://nodejs.org/dist/v0.10.2/node-v0.10.2-linux-arm-pi.tar.gz
@@ -57,6 +54,10 @@ sudo apt-get install -y php5-fpm
 
 # Install Heroku Toolbelt
 wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+
+# Install and setup ZNC - IRC bouncer.
+sudo apt-get install -y znc
+znc --makeconf
 
 # Setup Nginx and PHP.
 sudo mkdir -p /var/www

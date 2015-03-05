@@ -17,6 +17,9 @@ ssh-keygen -t rsa -C "NUC"
 
 mkdir ~/Workspace
 
+rm ~/examples.desktop
+sudo rm -rf /usr/share/example-content/
+
 git config --global user.name "Gytis Karčiauskas"
 git config --global user.email gytis@karciauskas.lt
 

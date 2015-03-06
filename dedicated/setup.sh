@@ -1,7 +1,7 @@
 #!/bin/sh
 
-echo "==> Downloading the package lists from the repositories and updating them to get information on the newest versions of packages and their dependencies..."
+echo "==> Downloading information from the repositories about newest versions of the packages and their dependencies..."
 apt-get update > /dev/null
 
-echo "==> Fetching new versions of packages existing on the machine..."
+echo "==> Fetching and upgrading new versions of the packages existing on this machine..."
 apt-get upgrade -y

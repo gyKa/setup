@@ -5,7 +5,7 @@ sudo apt-get upgrade
 sudo apt-get dist-upgrade
 
 sudo apt-get install htop keepassx flashplugin-installer git vim gitg \
-python-virtualenv tree
+python-virtualenv tree mysql-workbench mysql-server
 
 sudo sh -c "echo 'deb http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/xUbuntu_14.04/ /' >> /etc/apt/sources.list.d/owncloud-client.list"
 wget http://download.opensuse.org/repositories/isv:ownCloud:desktop/xUbuntu_14.04/Release.key

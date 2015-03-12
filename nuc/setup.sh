@@ -25,6 +25,9 @@ git config --global user.email gytis@karciauskas.lt
 echo "==> Installing GitG..."
 sudo apt-get install -y gitg > /dev/null
 
+echo "==> Installing Flash support..."
+sudo apt-get install -y flashplugin-installer > /dev/null
+
 echo "==> Generating SSH keys..."
 ssh-keygen -t rsa -C "NUC"
 

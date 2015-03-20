@@ -40,3 +40,4 @@ sudo rm -rf /usr/share/example-content/
 echo "==> Preparing workspace..."
 mkdir ~/Workspace
 git clone git@github.com:gyKa/setup.git ~/Workspace/setup
+git clone git@github.com:gyKa/back-time.git ~/Workspace/back-time

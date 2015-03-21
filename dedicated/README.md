@@ -1,5 +1,9 @@
 # Dedicated
 
+This setup is tested on Debian 7 (64-bit) only. Root access should be enabled.
+
 `wget https://raw.githubusercontent.com/gyKa/setup/master/dedicated/setup.sh`
 
-This setup is tested on Ubuntu 14.04.1 LTS only. Root access should be enabled.
+`chmod +x setup.sh`
+
+`bash setup.sh`

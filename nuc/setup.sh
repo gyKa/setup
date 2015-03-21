@@ -21,6 +21,7 @@ echo "==> Installing and setting up Git..."
 sudo apt-get install -y git > /dev/null
 git config --global user.name "Gytis Karčiauskas"
 git config --global user.email gytis@karciauskas.lt
+git config --global push.default simple
 
 echo "==> Installing GitG..."
 sudo apt-get install -y gitg > /dev/null

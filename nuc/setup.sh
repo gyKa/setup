@@ -35,6 +35,9 @@ sudo apt-get install -y vim > /dev/null
 echo "==> Installing IRC client..."
 sudo apt-get install -y smuxi > /dev/null
 
+echo "==> Installing Filezilla..."
+sudo apt-get install -y filezilla > /dev/null
+
 echo "==> Generating SSH keys..."
 ssh-keygen -t rsa -C "NUC"
 

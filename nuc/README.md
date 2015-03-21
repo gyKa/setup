@@ -21,3 +21,19 @@ Works on Ubuntu 14.04.2 LTS
 #### Plugins
 
 [Todoist](https://addons.mozilla.org/en-US/thunderbird/addon/todoist-for-thunderbird-to-/)
+
+### Unity
+
+Remove following icons:
+
+* LibreOffice Writer
+* LibreOffice Calc
+* LibreOffice Impress
+* System Settings
+* Ubuntu Software Center
+* Amazon
+
+Add following icons:
+
+* Thunderbird
+* KeePassX

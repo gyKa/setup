@@ -48,3 +48,4 @@ echo "==> Preparing workspace..."
 mkdir ~/Workspace
 git clone git@github.com:gyKa/setup.git ~/Workspace/setup
 git clone git@github.com:gyKa/back-time.git ~/Workspace/back-time
+git clone git@github.com:gyKa/homepage.git ~/Workspace/homepage

@@ -37,6 +37,9 @@ sudo apt-get install -y flashplugin-installer > /dev/null
 echo "==> Installing VIM..."
 sudo apt-get install -y vim > /dev/null
 
+echo "==> Installing VLC..."
+sudo apt-get install -y vlc > /dev/null
+
 echo "==> Installing XChat..."
 sudo apt-get install -y xchat > /dev/null
 

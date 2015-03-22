@@ -23,6 +23,11 @@ git config --global user.name "Gytis Karčiauskas"
 git config --global user.email gytis@karciauskas.lt
 git config --global push.default simple
 
+echo "==> Installing Bash Git prompt..."
+git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt
+echo "source .bash-git-prompt/gitprompt.sh" >> .bashrc
+source .bashrc
+
 echo "==> Installing GitG..."
 sudo apt-get install -y gitg > /dev/null
 

@@ -37,8 +37,8 @@ sudo apt-get install -y flashplugin-installer > /dev/null
 echo "==> Installing VIM..."
 sudo apt-get install -y vim > /dev/null
 
-echo "==> Installing IRC client..."
-sudo apt-get install -y smuxi > /dev/null
+echo "==> Installing XChat..."
+sudo apt-get install -y xchat > /dev/null
 
 echo "==> Installing Filezilla..."
 sudo apt-get install -y filezilla > /dev/null

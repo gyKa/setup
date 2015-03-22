@@ -9,6 +9,13 @@ apt-get upgrade -y > /dev/null
 echo "==> Installing Git..."
 apt-get install -y git > /dev/null
 
+echo "==> Installing and setting up ZNC server..."
+apt-get install -y znc
+adduser bouncer
+su bouncer
+znc --makeconf
+exit
+
 echo "==> Preparing WEB environtment..."
 echo "===> karciauskas.lt"
 mkdir -p /var/www/karciauskas.lt/public_html

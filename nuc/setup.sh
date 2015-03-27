@@ -24,9 +24,9 @@ git config --global user.email gytis@karciauskas.lt
 git config --global push.default simple
 
 echo "==> Installing Bash Git prompt..."
-git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt
-echo "source .bash-git-prompt/gitprompt.sh" >> .bashrc
-source .bashrc
+git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt
+echo "source ~/.bash-git-prompt/gitprompt.sh" >> ~/.bashrc
+source ~/.bashrc
 
 echo "==> Installing GitG..."
 sudo apt-get install -y gitg > /dev/null
@@ -45,6 +45,20 @@ sudo apt-get install -y xchat > /dev/null
 
 echo "==> Installing Filezilla..."
 sudo apt-get install -y filezilla > /dev/null
+
+echo "==> Installing PHP5..."
+sudo apt-get install -y php5-cli > /dev/null
+
+echo "==> Installing and setting up phpbrew..."
+curl -L -O https://github.com/phpbrew/phpbrew/raw/master/phpbrew
+chmod +x phpbrew
+sudo mv phpbrew /usr/bin/phpbrew
+phpbrew init
+echo "source ~/.phpbrew/bashrc" >> .bashrc
+source ~/.phpbrew/bashrc
+sudo apt-get install -y libxml2-dev libssl-dev libbz2-dev libreadline-dev \
+libxslt1-dev
+phpbrew install 5.4.38
 
 echo "==> Generating SSH keys..."
 ssh-keygen -t rsa -C "NUC"

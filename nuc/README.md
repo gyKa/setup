@@ -15,6 +15,8 @@ Works on Ubuntu 14.04.2 LTS
 #### Plugins
 
 * Adblock Plus
+* SaveFrom.net helper
+* Video DownloadHelper
 
 ### Thunderbird
 

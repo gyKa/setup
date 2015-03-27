@@ -46,8 +46,19 @@ sudo apt-get install -y xchat > /dev/null
 echo "==> Installing Filezilla..."
 sudo apt-get install -y filezilla > /dev/null
 
+echo "==> Installing and setting up Apache2..."
+sudo apt-get install -y apache2 > /dev/null
+sudo chown -R $USER:$GROUP /var/www
+
+echo "==> Installing MySQL server..."
+sudo apt-get install -y mysql-server > /dev/null
+
 echo "==> Installing PHP5..."
-sudo apt-get install -y php5-cli > /dev/null
+# Package php5 required only for the WEB.
+sudo apt-get install -y php5-cli php5 php5-mysql > /dev/null
+
+echo "==> Installing phpMyAdmin..."
+sudo apt-get install -y phpmyadmin > /dev/null
 
 echo "==> Installing and setting up phpbrew..."
 curl -L -O https://github.com/phpbrew/phpbrew/raw/master/phpbrew
@@ -59,9 +70,6 @@ source ~/.phpbrew/bashrc
 sudo apt-get install -y libxml2-dev libssl-dev libbz2-dev libreadline-dev \
 libxslt1-dev
 phpbrew install 5.4.38
-
-echo "==> Installing Apache2..."
-sudo apt-get install -y apache2 > /dev/null
 
 echo "==> Installing WP-CLI..."
 curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar

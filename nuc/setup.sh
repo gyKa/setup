@@ -54,11 +54,23 @@ curl -L -O https://github.com/phpbrew/phpbrew/raw/master/phpbrew
 chmod +x phpbrew
 sudo mv phpbrew /usr/bin/phpbrew
 phpbrew init
-echo "source ~/.phpbrew/bashrc" >> .bashrc
+echo "source ~/.phpbrew/bashrc" >> ~/.bashrc
 source ~/.phpbrew/bashrc
 sudo apt-get install -y libxml2-dev libssl-dev libbz2-dev libreadline-dev \
 libxslt1-dev
 phpbrew install 5.4.38
+
+echo "==> Installing Apache2..."
+sudo apt-get install -y apache2 > /dev/null
+
+echo "==> Installing WP-CLI..."
+curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+chmod +x wp-cli.phar
+sudo mv wp-cli.phar /usr/local/bin/wp
+curl -O https://raw.githubusercontent.com/wp-cli/wp-cli/master/utils/wp-completion.bash
+mv wp-completion.bash ~/.wp-cli/.wp-completion.bash
+echo "source ~/.wp-cli/.wp-completion.bash" >> .bashrc
+source ~/.wp-cli/.wp-completion.bash
 
 echo "==> Generating SSH keys..."
 ssh-keygen -t rsa -C "NUC"

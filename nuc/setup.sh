@@ -28,6 +28,9 @@ git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt
 echo "source ~/.bash-git-prompt/gitprompt.sh" >> ~/.bashrc
 source ~/.bashrc
 
+echo "==> Installing Ubuntu restricted extras..."
+sudo apt-get install -y ubuntu-restricted-extras > /dev/null
+
 echo "==> Installing GitG..."
 sudo apt-get install -y gitg > /dev/null
 

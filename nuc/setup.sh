@@ -6,6 +6,10 @@ sudo apt-get update -y > /dev/null
 echo "==> Installing the newest versions of all packages..."
 sudo apt-get upgrade -y > /dev/null
 
+echo "==> Setting up Bash..."
+echo 'alias ls="ls --color=auto"' > ~/.bashrc
+source ~/.bashrc
+
 echo "==> Installing ownCloud client..."
 sudo sh -c "echo 'deb http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/xUbuntu_14.04/ /' >> /etc/apt/sources.list.d/owncloud-client.list"
 wget http://download.opensuse.org/repositories/isv:ownCloud:desktop/xUbuntu_14.04/Release.key

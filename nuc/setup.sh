@@ -52,6 +52,9 @@ sudo apt-get install -y filezilla > /dev/null
 echo "==> Installing and setting up Apache2..."
 sudo apt-get install -y apache2 > /dev/null
 sudo chown -R $USER:$GROUP /var/www
+sudo rm /etc/apache2/envvars
+wget https://raw.githubusercontent.com/gyKa/setup/master/nuc/etc/apache2/envvars
+sudo mv envvars /etc/apache2/
 
 echo "==> Installing MySQL server..."
 sudo apt-get install -y mysql-server > /dev/null

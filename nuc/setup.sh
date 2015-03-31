@@ -67,6 +67,10 @@ echo "==> Installing PHP5..."
 # Package php5 required only for the WEB.
 sudo apt-get install -y php5-cli php5 php5-mysql > /dev/null
 
+echo "==> Installing Composer..."
+curl -sS https://getcomposer.org/installer | php
+sudo mv composer.phar /usr/local/bin/composer
+
 echo "==> Installing phpMyAdmin..."
 sudo apt-get install -y phpmyadmin > /dev/null
 

@@ -94,6 +94,12 @@ mv wp-completion.bash ~/.wp-cli/.wp-completion.bash
 echo "source ~/.wp-cli/.wp-completion.bash" >> .bashrc
 source ~/.wp-cli/.wp-completion.bash
 
+echo "==> Installing PIP..."
+sudo apt-get install -y python-pip > /dev/null
+
+echo "==> Installing virtualenv..."
+sudo pip install virtualenv
+
 echo "==> Generating SSH keys..."
 ssh-keygen -t rsa -C "NUC"
 

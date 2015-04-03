@@ -108,6 +108,9 @@ source ~/.rvm/scripts/rvm
 echo "==> Installing Ruby..."
 rvm install ruby-2.2.1
 
+echo "==> Installing NodeJS..."
+sudo apt-get install -y nodejs
+
 echo "==> Generating SSH keys..."
 ssh-keygen -t rsa -C "NUC"
 

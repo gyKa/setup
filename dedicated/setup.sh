@@ -6,6 +6,9 @@ apt-get update -y > /dev/null
 echo "==> Installing the newest versions of all packages..."
 apt-get upgrade -y > /dev/null
 
+echo "==> Installing cURL..."
+apt-get install -y curl > /dev/null
+
 echo "==> Installing Git..."
 apt-get install -y git > /dev/null
 
@@ -15,6 +18,19 @@ adduser bouncer
 su bouncer
 znc --makeconf
 exit
+
+echo "==> Installing RVM..."
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+\curl -sSL https://get.rvm.io | bash -s stable
+usermod -a -G rvm root
+source /etc/profile.d/rvm.sh
+
+echo "==> Installing Ruby..."
+rvm install ruby-2.2.1
+
+echo "==> Installing NodeJS..."
+curl -sL https://deb.nodesource.com/setup | bash -
+apt-get install -y nodejs
 
 echo "==> Preparing WEB environtment..."
 echo "===> karciauskas.lt"

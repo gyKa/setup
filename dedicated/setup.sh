@@ -32,6 +32,9 @@ echo "==> Installing NodeJS..."
 curl -sL https://deb.nodesource.com/setup | bash -
 apt-get install -y nodejs
 
+echo "==> Installing MySQL server..."
+apt-get install -y mysql-server
+
 echo "==> Preparing WEB environtment..."
 echo "===> karciauskas.lt"
 mkdir -p /var/www/karciauskas.lt/public_html

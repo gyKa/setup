@@ -63,6 +63,9 @@ sudo mv envvars /etc/apache2/
 echo "==> Installing MySQL server..."
 sudo apt-get install -y mysql-server > /dev/null
 
+echo "==> Installing MySQL client..."
+sudo apt-get install -y libmysqlclient-dev > /dev/null
+
 echo "==> Installing PHP5..."
 # Package php5 required only for the WEB.
 sudo apt-get install -y php5-cli php5 php5-mysql > /dev/null
@@ -111,6 +114,9 @@ rvm install ruby-2.2.1
 
 echo "==> Installing NodeJS..."
 sudo apt-get install -y nodejs
+
+echo "==> Installing Python..."
+sudo apt-get install -y python3-dev
 
 echo "==> Generating SSH keys..."
 ssh-keygen -t rsa -C "NUC"

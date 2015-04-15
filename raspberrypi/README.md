@@ -16,6 +16,8 @@ Select following entries:
 
 8) Advanced Options > Memory Split > 16
 
+9) Advanced Options > Serial > No
+
 Then select "Finish" and "Yes".
 
 After reboot, change default account password, download `setup.sh` from this

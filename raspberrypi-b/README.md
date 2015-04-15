@@ -1,4 +1,4 @@
-# Raspberry Pi
+# RaspberryPi B
 
 Install latest version of Raspbian OS.
 

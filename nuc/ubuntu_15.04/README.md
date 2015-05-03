@@ -36,17 +36,40 @@ $ git config --global user.email gytis@karciauskas.lt
 $ git config --global push.default simple
 
 # Install GitG...
-sudo apt-get install -y gitg > /dev/null
+$ sudo apt-get install -y gitg > /dev/null
 
 # Install VIM...
 $ sudo apt-get install -y vim > /dev/null
 
 # Install XChat...
-sudo apt-get install -y xchat > /dev/null
+$ sudo apt-get install -y xchat > /dev/null
+
+# Install VLC...
+$ sudo apt-get install -y vlc > /dev/null
+
+# Install Liferea...
+$ sudo apt-get install -y liferea > /dev/null
+
+# Install Turpial...
+$ sudo apt-get install -y turpial > /dev/null
+
+# Installing Ubuntu restricted extras...
+$ sudo apt-get install -y ubuntu-restricted-extras > /dev/null
+
+# Install Unity Twaek Tool...
+$ sudo apt-get install unity-tweak-tool > /dev/null
+
+# Install fswebcam...
+$ sudo apt-get install fswebcam > /dev/null
+
+# Install ffmpeg...
+# sudo apt-get install ffmpeg > /dev/null
 
 # Prepare workspace...
 $ mkdir ~/Workspace
 $ git clone git@github.com:gyKa/setup.git ~/Workspace/setup
+$ git clone git@github.com:gyKa/bin.git ~/Workspace/bin
+$ make -c ~/Workspace/bin
 ```
 
 ## Appearance
@@ -55,12 +78,15 @@ $ git clone git@github.com:gyKa/setup.git ~/Workspace/setup
 * Enable Workspaces.
 * Remove LibreOffice, Ubuntu Software Center, Amazon, System settings icons from Launcher.
 * Add KeepassX, Thunderbird, XChat icons into Laucher.
+* Add Lithuanian keyboard layout.
 
 ## Applications
 
 ### Firefox
 
-Add *Max Tabs 0.2* plugin.
+Add *Window and Tab Limiter 4.28* plugin.
+Add *RSS Icon in url bar 1.5* plugin.
+Add *YouTube mp3 1.0.9* plugin.
 
 ### Thunderbird
 
@@ -69,3 +95,8 @@ Add 3 accounts.
 ### XChat
 
 Add account for 2 servers.
+Enable timestamps.
+
+## Unity Tweak Tool
+
+Set vertical workspaces to 3.

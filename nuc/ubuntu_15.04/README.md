@@ -1,3 +1,5 @@
+## Installation & configuration
+
 ```sh
 # Update the list of packages...
 $ sudo apt-get update -y > /dev/null
@@ -36,10 +38,34 @@ $ git config --global push.default simple
 # Install GitG...
 sudo apt-get install -y gitg > /dev/null
 
-# Installing VIM...
+# Install VIM...
 $ sudo apt-get install -y vim > /dev/null
+
+# Install XChat...
+sudo apt-get install -y xchat > /dev/null
 
 # Prepare workspace...
 $ mkdir ~/Workspace
 $ git clone git@github.com:gyKa/setup.git ~/Workspace/setup
 ```
+
+## Appearance
+
+* Change wallpaper.
+* Enable Workspaces.
+* Remove LibreOffice, Ubuntu Software Center, Amazon, System settings icons from Launcher.
+* Add KeepassX, Thunderbird, XChat icons into Laucher.
+
+## Applications
+
+### Firefox
+
+Add *Max Tabs 0.2* plugin.
+
+### Thunderbird
+
+Add 3 accounts.
+
+### XChat
+
+Add account for 2 servers.

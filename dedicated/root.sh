@@ -31,6 +31,11 @@ mkdir -p /var/www/homepage-karciauskas-lt/public_html
 wget https://raw.githubusercontent.com/gyKa/setup/master/dedicated/etc/apache2/sites-available/homepage-karciauskas-lt.conf
 mv homepage-karciauskas-lt.conf /etc/apache2/sites-available/homepage-karciauskas-lt.conf
 a2ensite homepage-karciauskas-lt
+echo "===> evenite.karciauskas.lt"
+mkdir -p /var/www/evenite/public
+wget https://raw.githubusercontent.com/gyKa/setup/master/dedicated/etc/apache2/sites-available/evenite.conf
+mv evenite.conf /etc/apache2/sites-available/evenite.conf
+a2ensite evenite
 echo "===> finished!"
 service apache2 restart
 

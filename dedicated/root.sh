@@ -26,6 +26,11 @@ mkdir -p /var/www/karciauskas-lt/public_html
 wget https://raw.githubusercontent.com/gyKa/setup/master/dedicated/etc/apache2/sites-available/karciauskas-lt.conf
 mv karciauskas-lt.conf /etc/apache2/sites-available/karciauskas-lt.conf
 a2ensite karciauskas-lt
+echo "===> homepage.karciauskas.lt"
+mkdir -p /var/www/homepage-karciauskas-lt/public_html
+wget https://raw.githubusercontent.com/gyKa/setup/master/dedicated/etc/apache2/sites-available/homepage-karciauskas-lt.conf
+mv homepage-karciauskas-lt.conf /etc/apache2/sites-available/homepage-karciauskas-lt.conf
+a2ensite homepage-karciauskas-lt
 echo "===> finished!"
 service apache2 restart
 

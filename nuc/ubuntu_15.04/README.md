@@ -63,7 +63,10 @@ $ sudo apt-get install unity-tweak-tool > /dev/null
 $ sudo apt-get install fswebcam > /dev/null
 
 # Install ffmpeg...
-# sudo apt-get install ffmpeg > /dev/null
+$ sudo apt-get install ffmpeg > /dev/null
+
+# Install htop...
+$ sudo apt-get install htop > /dev/null
 
 # Prepare workspace...
 $ mkdir ~/Workspace
@@ -87,6 +90,8 @@ $ make -c ~/Workspace/bin
 Add *Window and Tab Limiter 4.28* plugin.
 Add *RSS Icon in url bar 1.5* plugin.
 Add *YouTube mp3 1.0.9* plugin.
+
+Change homepage to *http://homepage.karciauskas.lt*.
 
 ### Thunderbird
 

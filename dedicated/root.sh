@@ -20,7 +20,7 @@ echo "==> Preparing WEB environtment..."
 usermod -a -G www-data gytis
 chgrp -R www-data /var/www
 chmod -R 775 /var/www
-chmod -R g+s /var/www
+chmod -R g+ws /var/www
 echo "===> karciauskas.lt"
 mkdir -p /var/www/karciauskas-lt/public_html
 wget https://raw.githubusercontent.com/gyKa/setup/master/dedicated/etc/apache2/sites-available/karciauskas-lt.conf

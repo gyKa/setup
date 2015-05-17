@@ -9,6 +9,22 @@ apt-get upgrade -y > /dev/null
 echo "==> Installing ZNC server..."
 apt-get install -y znc > /dev/null
 
+echo "==> Installing Git..."
+apt-get install -y git-core > /dev/null
+
+echo "==> Install PHP..."
+apt-get install -y php5-cli > /dev/null
+apt-get install -y php5-mcrypt > /dev/null
+php5enmod mcrypt
+apt-get install -y php5 > /dev/null
+
+echo "==> Install cUrl..."
+apt-get install -y curl > /dev/null
+
+echo "==> Install Composer..."
+curl -sS https://getcomposer.org/installer | php
+mv composer.phar /usr/local/bin/composer
+
 echo "==> Adding new user..."
 adduser gytis
 
@@ -20,7 +36,7 @@ echo "==> Preparing WEB environtment..."
 usermod -a -G www-data gytis
 chgrp -R www-data /var/www
 chmod -R 775 /var/www
-chmod -R g+ws /var/www
+chmod -R g+s /var/www # setgid permission
 echo "===> karciauskas.lt"
 mkdir -p /var/www/karciauskas-lt/public_html
 wget https://raw.githubusercontent.com/gyKa/setup/master/dedicated/etc/apache2/sites-available/karciauskas-lt.conf
@@ -32,10 +48,14 @@ wget https://raw.githubusercontent.com/gyKa/setup/master/dedicated/etc/apache2/s
 mv homepage-karciauskas-lt.conf /etc/apache2/sites-available/homepage-karciauskas-lt.conf
 a2ensite homepage-karciauskas-lt
 echo "===> evenite.karciauskas.lt"
-mkdir -p /var/www/evenite/public
+git clone https://github.com/gyKa/evenite.git /var/www/evenite
 wget https://raw.githubusercontent.com/gyKa/setup/master/dedicated/etc/apache2/sites-available/evenite.conf
 mv evenite.conf /etc/apache2/sites-available/evenite.conf
 a2ensite evenite
+cd /var/www/evenite
+composer install
+chmod -R 775 /var/www/evenite/vendor /var/www/evenite/storage
+cd ~
 echo "===> finished!"
 service apache2 restart
 

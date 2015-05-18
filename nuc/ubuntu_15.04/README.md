@@ -56,9 +56,6 @@ $ sudo apt-get install -y turpial > /dev/null
 # Installing Ubuntu restricted extras...
 $ sudo apt-get install -y ubuntu-restricted-extras > /dev/null
 
-# Install Unity Twaek Tool...
-$ sudo apt-get install unity-tweak-tool > /dev/null
-
 # Install fswebcam...
 $ sudo apt-get install fswebcam > /dev/null
 
@@ -67,6 +64,39 @@ $ sudo apt-get install ffmpeg > /dev/null
 
 # Install htop...
 $ sudo apt-get install htop > /dev/null
+
+# Install Ruby...
+$ sudo apt-get install ruby > /dev/null
+$ sudo apt-get install ruby-dev > /dev/null # if you want build something
+
+# Install Jekyll...
+$ sudo gem install jekyll
+
+# Install NodeJS...
+$ sudo apt-get install nodejs > /dev/null
+
+# Install PHP5...
+$ sudo apt-get install php5-cli > /dev/null
+$ sudo apt-get install php5-mcrypt > /dev/null
+$ sudo php5enmod mcrypt
+
+# Install curl...
+$ sudo apt-get install curl > /dev/null
+
+# Install Composer...
+$ curl -sS https://getcomposer.org/installer | php
+$ sudo mv composer.phar /usr/local/bin/composer
+
+# Install Lavaral installer...
+$ composer global require "laravel/installer=~1.1"
+$ echo "PATH=$PATH:~/.composer/vendor/bin" >> ~/.bashrc
+$ source ~/.bashrc
+
+# Install PIP...
+$ sudo apt-get install python-pip
+
+# Install Willie IRC bot...
+$ sudo pip install willie
 
 # Prepare workspace...
 $ mkdir ~/Workspace
@@ -77,9 +107,21 @@ $ make -c ~/Workspace/bin
 
 ## Appearance
 
+Unity sometimes crashes. Gnome 3/Classic looks terrible. Mate is FTW!
+
+```sh
+sudo apt-get install ubuntu-mate-core ubuntu-mate-desktop
+sudo reboot
+```
+
+Change Splash screen.
+
+```sh
+sudo update-alternatives --config default.plymouth
+sudo update-initramfs -u
+```
+
 * Change wallpaper.
-* Enable Workspaces.
-* Remove LibreOffice, Ubuntu Software Center, Amazon, System settings icons from Launcher.
 * Add KeepassX, Thunderbird, XChat icons into Laucher.
 * Add Lithuanian keyboard layout.
 

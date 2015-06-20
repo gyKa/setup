@@ -43,10 +43,11 @@ wget https://raw.githubusercontent.com/gyKa/setup/master/dedicated/etc/apache2/s
 mv karciauskas-lt.conf /etc/apache2/sites-available/karciauskas-lt.conf
 a2ensite karciauskas-lt
 echo "===> homepage.karciauskas.lt"
-mkdir -p /var/www/homepage-karciauskas-lt/public
+git clone https://github.com/gyKa/homepage.git /var/www/homepage-karciauskas-lt
 wget https://raw.githubusercontent.com/gyKa/setup/master/dedicated/etc/apache2/sites-available/homepage-karciauskas-lt.conf
 mv homepage-karciauskas-lt.conf /etc/apache2/sites-available/homepage-karciauskas-lt.conf
 a2ensite homepage-karciauskas-lt
+make install -C /var/www/homepage-karciauskas-lt
 echo "===> evenite.karciauskas.lt"
 git clone https://github.com/gyKa/evenite.git /var/www/evenite
 wget https://raw.githubusercontent.com/gyKa/setup/master/dedicated/etc/apache2/sites-available/evenite.conf

@@ -12,9 +12,16 @@ apt-get install -y znc > /dev/null
 echo "==> Installing Git..."
 apt-get install -y git-core > /dev/null
 
+echo "==> Install MySQL server..."
+apt-get install -y mysql-server > /dev/null
+
+echo "==> Install phpMyAdmin..."
+apt-get install -y phpmyadmin > /dev/null
+
 echo "==> Install PHP..."
 apt-get install -y php5-cli > /dev/null
 apt-get install -y php5-mcrypt > /dev/null
+apt-get install -y php5-mysql > /dev/null
 php5enmod mcrypt
 apt-get install -y php5 > /dev/null
 

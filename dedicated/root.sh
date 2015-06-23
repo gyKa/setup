@@ -42,6 +42,11 @@ mkdir -p /var/www/karciauskas-lt/public_html
 wget https://raw.githubusercontent.com/gyKa/setup/master/dedicated/etc/apache2/sites-available/karciauskas-lt.conf
 mv karciauskas-lt.conf /etc/apache2/sites-available/karciauskas-lt.conf
 a2ensite karciauskas-lt
+echo "===> keturvalakiai.eu"
+mkdir -p /var/www/keturvalakiai/public
+wget https://raw.githubusercontent.com/gyKa/setup/master/dedicated/etc/apache2/sites-available/keturvalakiai.conf
+mv keturvalakiai.conf /etc/apache2/sites-available/keturvalakiai.conf
+a2ensite keturvalakiai
 echo "===> homepage.karciauskas.lt"
 git clone https://github.com/gyKa/homepage.git /var/www/homepage-karciauskas-lt
 wget https://raw.githubusercontent.com/gyKa/setup/master/dedicated/etc/apache2/sites-available/homepage-karciauskas-lt.conf

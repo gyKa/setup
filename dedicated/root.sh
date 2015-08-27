@@ -6,9 +6,6 @@ apt-get update -y > /dev/null
 echo "==> Installing the newest versions of all packages..."
 apt-get upgrade -y > /dev/null
 
-echo "==> Installing ZNC server..."
-apt-get install -y znc > /dev/null
-
 echo "==> Installing Git..."
 apt-get install -y git-core > /dev/null
 
